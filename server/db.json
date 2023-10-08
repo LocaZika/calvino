@@ -1,0 +1,60 @@
+{
+  "header": {
+    "logo": "../../img/logo.png",
+    "navbar": [
+      {"id": "1", "name": "home", "url": "/home"},
+      {"id": "2", "name": "services", "url": "/services"},
+      {"id": "3", "name": "case study", "url": "/case-study"},
+      {"id": "4", "name": "blog", "url": "/blog"},
+      {"id": "5", "name": "contact", "url": "/contact"}
+    ],
+    "callUs": "(+84) 123 456 789",
+    "register": "register"
+  },
+  "footer": {
+    "logo": "../../img/logo.png",
+    "description": "duis aute irure dolor inasfa reprehenderit in voluptate velit esse cillum",
+    "socials": [
+      {"id": "1", "icon": "faInstagram", "color": "#0866ff", "url": "www.instagram.com"},
+      {"id": "2", "icon": "faFacebook", "color": "#0866ff", "url": "www.facebook.com"},
+      {"id": "3", "icon": "faLinkedinIn", "color": "#0a66c2", "url": "www.linkedin.com"},
+      {"id": "4", "icon": "faYoutube", "color": "#f00", "url": "www.youtube.com"}
+    ],
+    "navigations": {
+      "title": "navigation",
+      "menu": [
+        {"id": "1", "name": "home", "url": "/home"},
+        {"id": "2", "name": "services", "url": "/services"},
+        {"id": "3", "name": "case study", "url": "/case-study"},
+        {"id": "4", "name": "blog", "url": "/blog"},
+        {"id": "5", "name": "contact", "url": "/contact"}
+      ]
+    },
+    "services": {
+      "title": "services",
+      "menu": [
+        {"id": "1", "name": "drone mapping", "url": "#"},
+        {"id": "2", "name": "real state", "url": "#"},
+        {"id": "3", "name": "commercial", "url": "#"},
+        {"id": "4", "name": "construction", "url": "#"}
+      ]
+    },
+    "support": {
+      "title": "support",
+      "menu": [
+        {"id": "1", "name": "drone mapping", "url": "#"},
+        {"id": "2", "name": "real state", "url": "#"},
+        {"id": "3", "name": "commercial", "url": "#"},
+        {"id": "4", "name": "construction", "url": "#"}
+      ]
+    },
+    "contactUs": {
+      "title": "contact us",
+      "menu": [
+        {"id": "1", "type": "link", "name": "drone mapping", "url": "#"},
+        {"id": "2", "type": "email", "name": "contact@calvino.com", "url": "#"},
+        {"id": "3", "type": "tel", "name": "commercial", "url": "(+84) 123 456 789"}
+      ]
+    }
+  }
+}
