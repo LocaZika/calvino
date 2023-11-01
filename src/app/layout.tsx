@@ -1,11 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Header from '../components/layout/app.header';
-import Footer from '../components/layout/app.footer';
-import { Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { jost } from './fonts';
+import Header from '@/components/layout/app.header';
+import Footer from '@/components/layout/app.footer';
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Calvino',
@@ -19,11 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jost.className}>
         <Header />
-        <Container>
-          {children}
-        </Container>
+        {children}
         <Footer />
       </body>
     </html>
