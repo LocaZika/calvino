@@ -1,17 +1,17 @@
 'use client'
 import React from 'react'
-import footerStyle from '@/style/footer.module.scss';
+import footerStyle from '@styles/footer.module.scss';
 import { Col, Container, Row } from 'react-bootstrap';
 import useSWR from 'swr';
 import Image from 'next/image';
-import logo from '@/img/logo.png';
+import logo from '@imgs/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { faInstagram, faFacebook, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { ICaption, IMenuCaption } from '@/datatypes/backend';
-import { nunito } from '@/app/fonts';
+import { nunito } from '@app/fonts';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { getYear } from '@/ultils/date';
+import { getYear } from '@ultils/date';
 
 const HOST = process.env.NEXT_PUBLIC_HOST;
 const fetcher = (url: string) => fetch(url).then(res => res.json());

@@ -1,14 +1,14 @@
 'use client'
 import Image from 'next/image';
 import React from 'react';
-import logo from '@/img/logo.png';
+import logo from '@imgs/logo.png';
 import useSWR from 'swr';
 import Link from 'next/link';
 import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
-import headerStyle from '@/style/header.module.scss';
-import { convertTelNumber } from '@/ultils/string';
-import HeaderMobile from './app.header.mobile';
-import { useState, useEffect } from 'react';
+import headerStyle from '@styles/header.module.scss';
+import { convertTelNumber } from '@ultils/string';
+import HeaderMobile from '@components/layout/app.header.mobile';
+import { useState, useEffect, useRef } from 'react';
 import useScrollY from '@/hooks/useScrollY';
 
 
@@ -23,10 +23,10 @@ export default function Header() {
     revalidateOnFocus: false,
     revalidateOnReconnect: false
   });
-  const wScrollY = useScrollY();
-  console.log(wScrollY);
   
-  if(isLoading){
+  const scrollY = useScrollY();
+  
+  if(!data){
     return (
       <div>loading...</div>
     )
@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <header>
       <Navbar id='navbar' className={
-        wScrollY > 100 ?
+        scrollY > 100 ?
         `${headerStyle['navbar']} ${headerStyle['sticky']}`:
         `${headerStyle['navbar']} `
       }>
@@ -46,6 +46,7 @@ export default function Header() {
                   <Image
                     src={logo}
                     alt='logo'
+                    priority={true}
                   />
                 </Link>
               </div>
@@ -70,9 +71,9 @@ export default function Header() {
               </Link>
             </div>
             <HeaderMobile
-              navbar={data.navbar}
-              callUs={data.callUs}
-              contact={data.contact}
+              navbar={data?.navbar}
+              callUs={data?.callUs}
+              contact={data?.contact}
               logo={logo}
               style={headerStyle}
             />

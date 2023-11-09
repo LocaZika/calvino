@@ -1,4 +1,4 @@
-@import '_extendCss';
+@import '_extends';
 .navbar{
   position: absolute;
   top: 0;
@@ -145,5 +145,14 @@
   }
   &.sticky{
     position: fixed;
+    animation: stickyBar 0.5s linear normal forwards;
+    @keyframes stickyBar {
+      from{
+        top: -25%;
+      }
+      to{
+        top: 0;
+      }
+    }
   }
 }
