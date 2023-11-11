@@ -12,6 +12,6 @@ export default function useScrollY() {
       });
     });
     return window.removeEventListener('scroll', handleScrollY)
-  }, [window.scrollY])
+  }, [])
   return wScrollY;
 }
