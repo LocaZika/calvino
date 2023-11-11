@@ -10,6 +10,7 @@ import { convertTelNumber } from '@ultils/string';
 import HeaderMobile from '@components/layout/app.header.mobile';
 import { useState, useEffect, useRef } from 'react';
 import useScrollY from '@/hooks/useScrollY';
+import { INavbar } from '@/datatypes/backend';
 
 
 const HOST = process.env.NEXT_PUBLIC_HOST;
