@@ -28,17 +28,20 @@
     transition: all .4s ease-out 0s;
   }
 }
+%primary-bg{
+  background: #ff4495;
+  background: -moz-linear-gradient(top, #ff4495 0%, #ff6d6d 100%, #7db9e8 100%);
+  background: -webkit-linear-gradient(top, #ff4495 0%, #ff6d6d 100%, #7db9e8 100%);
+  background: linear-gradient(to bottom, #ff4495 0%, #ff6d6d 100%, #7db9e8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4495', endColorstr='#7db9e8', GradientType=0);
+}
 %contact_header_bg{
   -webkit-transition: all .5s ease-out 0s;
   -moz-transition: all .5s ease-out 0s;
   -ms-transition: all .5s ease-out 0s;
   -o-transition: all .5s ease-out 0s;
   transition: all .5s ease-out 0s;
-  background: #ff4495;
-  background: -moz-linear-gradient(top, #ff4495 0%, #ff6d6d 100%, #7db9e8 100%);
-  background: -webkit-linear-gradient(top, #ff4495 0%, #ff6d6d 100%, #7db9e8 100%);
-  background: linear-gradient(to bottom, #ff4495 0%, #ff6d6d 100%, #7db9e8 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4495', endColorstr='#7db9e8', GradientType=0);
+  @extend %primary-bg;
 }
 %contact_header {
   border: none;
@@ -56,7 +59,7 @@
   border-bottom: 0.1rem dotted var(--white);
   padding-bottom: 0.5rem;
 }
-%section_bg{
+%section-bg{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -73,18 +76,65 @@
 %d-none{
   display: none;
 }
-%text-underline{
+%text-under{
   text-decoration: underline;
 }
-%text-capitalize{
+%text-cap{
   text-transform: capitalize;
 }
-%mb-50{
-  margin-bottom: 5rem;
+%text-upper{
+  text-transform: uppercase;
 }
-%mb-30 {
-  margin-bottom: 3rem;
+%pos-rel{
+  position: relative;
 }
-%mb-35 {
-  margin-bottom: 3.5rem;
+%pos-abs{
+  position: absolute;
+}
+%btn-0{
+  padding: 1.1rem 3.6rem;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: inline-block;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 2.5rem;
+  -webkit-transition: all .5s ease-out 0s;
+  -moz-transition: all .5s ease-out 0s;
+  -ms-transition: all .5s ease-out 0s;
+  -o-transition: all .5s ease-out 0s;
+  transition: all .5s ease-out 0s;
+}
+%browser-btn{
+  color: #192839;
+  font-weight: 500;
+  font-size: 16px;
+  @extend %pos-rel;
+  @extend %d-inline;
+  @extend %text-cap;
+  &::before{
+    @extend %pos-abs;
+    content: "";
+    background: #FF4495;
+    width: 100%;
+    height: 2px;
+    bottom: -11px;
+  }
+  &:hover{
+    letter-spacing: 0.1rem;
+  }
+}
+%fix{
+  overflow: hidden;
+}
+%section-padding{
+  padding: 12rem 0;
+}
+%p-bg{
+  background-color: #F8FBFE;
+}
+%pt-70{
+  padding-top: 7rem;
 }

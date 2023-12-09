@@ -1,9 +1,10 @@
-import './globals.css'
+import './globals.scss'
 import type { Metadata } from 'next';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { jost } from './fonts';
 import Header from '@/components/layout/app.header';
 import Footer from '@/components/layout/app.footer';
+import BackTopBtn from '@/components/layout/app.backTop';
 
 
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <BackTopBtn />
       </body>
     </html>
   )

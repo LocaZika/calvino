@@ -1,32 +1,19 @@
 'use client'
 import Image from 'next/image';
 import React from 'react';
-import logo from '@imgs/logo.png';
-import useSWR from 'swr';
 import Link from 'next/link';
-import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
+import logo from '@public/imgs/logo.png';
 import headerStyle from '@styles/header.module.scss';
 import { convertTelNumber } from '@ultils/string';
 import HeaderMobile from '@components/layout/app.header.mobile';
-import { useState, useEffect, useRef } from 'react';
 import useScrollY from '@/hooks/useScrollY';
-import { INavbar } from '@/datatypes/backend';
-
-
-const HOST = process.env.NEXT_PUBLIC_HOST;
-const fetcher = (url: string) => fetch(url).then(res => res.json());
-
-
+import { INavbar } from '@/datatypes/types';
+import useApi from '@/hooks/useApi';
 
 export default function Header() {
-  const {data, isLoading} = useSWR(`${HOST}/header`, fetcher, {
-    revalidateIfStale: false,
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false
-  });
-  
+  const {data} = useApi('/header');
   const scrollY = useScrollY();
-  
   if(!data){
     return (
       <div>loading...</div>

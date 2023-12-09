@@ -1,30 +1,26 @@
-'use client'
-import React from 'react'
 import footerStyle from '@styles/footer.module.scss';
 import { Col, Container, Row } from 'react-bootstrap';
-import useSWR from 'swr';
 import Image from 'next/image';
-import logo from '@imgs/logo.png';
+import logo from '@public/imgs/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { faInstagram, faFacebook, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { ICaption, IMenuCaption } from '@/datatypes/backend';
+import { ICaption, IMenuCaption } from '@/datatypes/types';
 import { nunito } from '@app/fonts';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { getYear } from '@ultils/date';
+import useApi from '@/hooks/useApi';
 
-const HOST = process.env.NEXT_PUBLIC_HOST;
-const fetcher = (url: string) => fetch(url).then(res => res.json());
-
-
-export default function Footer() {
-  const {data, isLoading} = useSWR(`${HOST}/footer`, fetcher, {
-    revalidateIfStale: false,
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false
+export default async function Footer() {
+  const getPage = await fetch(`${process.env.NEXT_PUBLIC_HOST}/footer`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
   });
-  if(isLoading){
-    <div>Loading...</div>
+  const data = await getPage.json();
+  if (undefined == data){
+    <div>loading</div>
   }
   return (
     <footer>
@@ -33,9 +29,9 @@ export default function Footer() {
           <Container>
             <Row className='justify-content-between'>
               <Col sm={8} md={6} lg={3} xl={3}>
-                <div className={footerStyle['footer-wrapper__footer-area__caption']}>
+                <div className={`${footerStyle['footer-wrapper__footer-area__caption']} mb-50`}>
                   <div className='mb-30'>
-                    <div className={footerStyle['footer-wrapper__footer-area__caption__logo']}>
+                    <div className='mb-35'>
                       <Image
                         src={logo}
                         alt='logo'

@@ -1,6 +1,6 @@
 import useSWR from "swr";
 
-const host: any = process.env.HOST;
+const host: string | undefined = process.env.NEXT_PUBLIC_HOST;
 
 const headers = (method: string, data?: {}) => {
   const header: HeadersInit = {
@@ -11,28 +11,29 @@ const headers = (method: string, data?: {}) => {
   return header;
 }
 
-export default function useApi(api: IApi) {
-  const fetcher = (url: string) => fetch(url).then(res => res.json());
+const fetcher = (url: string) => fetch(url).then(res => res.json());
+
+export default function useApi(api: string) {
   const {data, error, isLoading} = useSWR(host + api, fetcher, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false
   })
-  const get = (api: string) => ({data, error, isLoading});
-  const post = async (api: IApi, data: {}) => {
+  
+  const post = async (api: string, data: {}) => {
     const postData = await fetch(host + api, headers('POST', data));
     const res = await postData.json();
     return res;
   }
   const patch = async (id: string, data: {}) => {
-    const postData = await fetch(`${host}${api}/${id}`, headers('PATCH', data));
-    const res = await postData.json();
+    const patchData = await fetch(`${host}${api}/${id}`, headers('PATCH', data));
+    const res = await patchData.json();
     return res;
   }
   const remove = async (id: string) => {
-    const postData = await fetch(`${host}${api}/${id}`, headers('DELETE'));
-    const res = await postData.json();
+    const removeData = await fetch(`${host}${api}/${id}`, headers('DELETE'));
+    const res = await removeData.json();
     return res;
   }
-  return {get, post, patch, remove}
+  return {data, isLoading, error, post, patch, remove}
 }

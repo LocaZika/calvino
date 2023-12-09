@@ -1,13 +1,9 @@
-@import '_extends';
+@use '@styles/_extends';
 .footer-wrapper{
-  background: #fff url(../imgs/footer-bg.jpg) no-repeat center center/cover;
+  background: #fff url('../../public/imgs/footer-bg.jpg') no-repeat center center/cover;
   &__footer-area{
     padding: 10rem 0 0;
     &__caption {
-      @extend %mb-50;
-      &__logo{
-        @extend %mb-35;
-      }
       &__pera{
         p{
           color: #5E5E5E;
@@ -15,7 +11,7 @@
           margin-bottom: 2.1rem;
           line-height: 1.8;
           &::first-letter{
-            @extend %text-capitalize;
+            @extend %text-cap;
           }
         }
       }
@@ -39,7 +35,7 @@
         }
       }
       h4 {
-        @extend %text-capitalize;
+        @extend %text-cap;
         color: #1A1A1A;
         font-size: 2rem;
         margin-bottom: 4rem;
@@ -54,16 +50,16 @@
             font-weight: 300;
             font-size: 16px;
             text-decoration: underline transparent;
-            @extend %text-capitalize;
+            @extend %text-cap;
             &:hover {
-              text-decoration: underline;
+              @extend %text-under;
             }
           }
           &.footer-wrapper__footer-area__caption--contact{
             >a:nth-child(n){
               font-size: 22px;
               color: #FF4495;
-              text-decoration: underline;
+              @extend %text-under;
               margin-bottom: 0px;
               font-weight: 600;
             }
@@ -77,7 +73,7 @@
             font-size: 1.4rem;
             color: #1A1A1A;
             margin-bottom: .5rem;
-            @extend %text-underline;
+            @extend %text-under;
             text-transform: lowercase;
             &::first-letter{
               text-transform: uppercase;
@@ -88,7 +84,7 @@
             color: #FF4495;
             margin-bottom: 0;
             font-weight: 600;
-            @extend %text-underline;
+            @extend %text-under;
           }
         }
       }

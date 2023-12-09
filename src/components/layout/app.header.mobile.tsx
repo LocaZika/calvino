@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IHeaderMobile, INavbar } from '@/datatypes/backend';
+import { IHeaderMobile, INavbar } from '@/datatypes/types';
 import { convertTelNumber } from '@/ultils/string';
 
 

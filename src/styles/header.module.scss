@@ -1,4 +1,4 @@
-@import '_extends';
+@use '@styles/_extends';
 .navbar{
   position: absolute;
   top: 0;
@@ -54,7 +54,7 @@
       font-size: 1.8rem;
       font-weight: 400;
       margin-right: 2.6rem;
-      @media only screen and (min-width: 992px) and (max-width: 1199px){
+      @media only screen and (max-width: 1199px){
         display: none;
       }
       >span{
@@ -145,6 +145,8 @@
   }
   &.sticky{
     position: fixed;
+    padding: 0 2rem;
+    background-color: var(--white);
     animation: stickyBar 0.5s linear normal forwards;
     @keyframes stickyBar {
       from{

@@ -58,5 +58,162 @@
         ]
       }
     ]
-  }
+  },
+  "homepage": {
+    "hero": {
+      "id": "1",
+      "theme": "digital maketing expert",
+      "title": "we bring you new customers",
+      "text": "we build effective strategies to help you reach customers and prospects across the entire web.",
+      "link": "explore services"
+    },
+    "services": {
+      "id": "1",
+      "title": "our services",
+      "subTitle": "provide awesome service with our tools",
+      "items": [
+        {
+          "id": "1",
+          "title": "discover, explore the product",
+          "img": "/imgs/icons/services1.svg",
+          "content": "effective strategies to help you reach customers.",
+          "url": "/services"
+        },
+        {
+          "id": "2",
+          "title": "discover, explore the product",
+          "img": "/imgs/icons/services2.svg",
+          "content": "effective strategies to help you reach customers.",
+          "url": "/services"
+        },
+        {
+          "id": "3",
+          "title": "discover, explore the product",
+          "img": "/imgs/icons/services3.svg",
+          "content": "effective strategies to help you reach customers.",
+          "url": "/services"
+        },
+        {
+          "id": "4",
+          "title": "discover, explore the product",
+          "img": "/imgs/icons/services3.svg",
+          "content": "effective strategies to help you reach customers.",
+          "url": "/services"
+        }
+      ]
+    },
+    "about": {
+      "id": "1",
+      "title": "about us",
+      "subTitle": "we create a steps to build a successful digital product",
+      "contents": [
+        {"id": "1", "text": "with over 50 years of combined experience, our mission is to design with your values and vision in mind. we’re out to create purposeful spaces that balance art and creativity with science and strategy."},
+        {"id": "2", "text": "we’re out to create purposeful spaces that balance art and creativity with science and strategy."}
+      ],
+      "link": {
+        "text": "explore more",
+        "path": "/about"
+      },
+      "img": "/imgs/about1.png"
+    },
+    "plans": {
+      "id": "1",
+      "title": "pricing plan",
+      "subTitle": "choose your best pricing plan"
+    },
+    "chooseUs": {
+      "id": "1",
+      "title": "why choose us",
+      "subTitle": "we are an SEO company that specializes in developing",
+      "completedProjects": 451,
+      "specialisedEmployees": 860,
+      "text": "with over 50 years of combined experience, our mission is to design with your values and vision in mind. We’re out to create purposeful spaces that balance art and creativity with science and strategy.",
+      "speaker": "- Shonda Leer, Chief of Staff at Franclin Technologies"
+    },
+    "caseStudy": {
+      "id": "1",
+      "title": "case study",
+      "subTitle": "some of our awsome stuffs",
+      "imgs": [
+        {"id": "1", "path": "/imgs/stuffs/stuffs1.jpg", "title": "marketing", "subTitle": "discover, explore the product"},
+        {"id": "1", "path": "/imgs/stuffs/stuffs2.jpg", "title": "marketing", "subTitle": "discover, explore the product"},
+        {"id": "1", "path": "/imgs/stuffs/stuffs3.jpg", "title": "marketing", "subTitle": "discover, explore the product"}
+      ]
+    }
+  },
+  "pricingPlans": [
+    {
+      "id": "1",
+      "price": 5.00,
+      "increaseTraffic": 25,
+      "socialMediaMkt": false,
+      "freeOptimization": 0,
+      "support": "24/7",
+      "period": "monthly",
+      "classification": "basic",
+      "path": "/imgs/icons/price1.svg"
+    },
+    {
+      "id": "2",
+      "price": 10.00,
+      "increaseTraffic": 50,
+      "socialMediaMkt": true,
+      "freeOptimization": 10,
+      "support": "24/7",
+      "period": "monthly",
+      "classification": "professional",
+      "path": "/imgs/icons/price2.svg"
+    },
+    {
+      "id": "3",
+      "price": 19.99,
+      "increaseTraffic": 75,
+      "socialMediaMkt": true,
+      "freeOptimization": 15,
+      "support": "24/7",
+      "period": "monthly",
+      "classification": "enterprise",
+      "path": "/imgs/icons/price3.svg"
+    },
+    {
+      "id": "4",
+      "price": 50.00,
+      "increaseTraffic": 30,
+      "socialMediaMkt": true,
+      "freeOptimization": 7,
+      "support": "24/7",
+      "period": "yearly",
+      "classification": "professional",
+      "path": "/imgs/icons/price1.svg"
+    },
+    {
+      "id": "5",
+      "price": 109.99,
+      "increaseTraffic": 60,
+      "socialMediaMkt": true,
+      "freeOptimization": 12,
+      "support": "24/7",
+      "period": "yearly",
+      "classification": "basic",
+      "path": "/imgs/icons/price2.svg"
+    },
+    {
+      "id": "6",
+      "price": 219.99,
+      "increaseTraffic": 80,
+      "socialMediaMkt": true,
+      "freeOptimization": 18,
+      "support": "24/7",
+      "period": "yearly",
+      "classification": "enterprise",
+      "path": "/imgs/icons/price3.svg"
+    }
+  ],
+  "brands": [
+    {"id": "1", "path": "/imgs/brands/brand1.png"},
+    {"id": "2", "path": "/imgs/brands/brand2.png"},
+    {"id": "3", "path": "/imgs/brands/brand3.png"},
+    {"id": "4", "path": "/imgs/brands/brand4.png"},
+    {"id": "5", "path": "/imgs/brands/brand5.png"}
+  ]
 }
