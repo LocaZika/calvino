@@ -3,7 +3,7 @@ import planStyle from './plan.module.scss';
 import { useState } from 'react';
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import { nunito } from '@app/fonts';
-import { PlanCard } from '@components';
+import PlanCard from '../planCard/PlanCard';
 
 
 export default function Plan({data}: {data: TPlan}) {

@@ -2,7 +2,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import chooseUsStyle from './chooseUs.module.scss';
 import { nunito } from '@app/fonts';
 import Link from 'next/link';
-import { Brands, Counter } from '@components';
+import Brands from '../brands/Brands';
+import Counter from '../counter/Counter';
 
 export default function ChooseUs({data}: {data: TChooseUs}) {
   const {title, subTitle, specialisedEmployees, completedProjects, text, speaker, brands}: TChooseUs = data;

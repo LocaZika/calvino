@@ -1,5 +1,5 @@
 import { Col, Container, Placeholder, Row } from "react-bootstrap";
-import { Carousel } from "@components";
+import Carousel from "../carousel/CustomCarousel";
 import Image from "next/image";
 import brandStyle from './brand.module.scss';
 

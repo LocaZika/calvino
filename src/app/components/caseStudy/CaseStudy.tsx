@@ -1,6 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import caseStyle from './caseStudy.module.scss';
-import { Carousel } from '@components';
+import Carousel from '../carousel/CustomCarousel';
 import Image from 'next/image';
 import { nunito } from '@app/fonts';
 

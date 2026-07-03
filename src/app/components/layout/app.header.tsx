@@ -6,7 +6,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import logo from '@public/imgs/logo.png';
 import headerStyle from '@styles/header.module.scss';
 import { convertTelNumber } from '@ultils/string';
-import { HeaderMobile } from '@components';
+import HeaderMobile from './app.header.mobile';
 import { useScrollY } from '@hooks';
 
 export default function Header({data}: IComponentProps<IHeader>) {

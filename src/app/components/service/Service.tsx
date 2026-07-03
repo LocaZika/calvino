@@ -1,7 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import serviceStyle from './service.module.scss';
 import { nunito } from '@app/fonts';
-import {Card} from '@components';
+import Card from '../card/Card';
 import Image from 'next/image';
 import shape1 from '@public/imgs/shapes/shape-1.png';
 import shape2 from '@public/imgs/shapes/shape-2.png';
